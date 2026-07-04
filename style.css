@@ -11,44 +11,32 @@ body{
 }
 
 .container{
-    width:100%;
-    max-width:1400px;
-    margin:auto;
-}
-
-.container h1{
-    text-align:center;
-    color:#003b8e;
-    margin-bottom:35px;
-}
-
-.main-container{
     display:flex;
     gap:40px;
     align-items:flex-start;
 }
 
-.form-container{
-    width:380px;
+.left-panel{
+    width:350px;
     background:#fff;
     padding:25px;
     border-radius:15px;
-    box-shadow:0 10px 25px rgba(0,0,0,.12);
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
 }
 
-.form-container h2{
+.left-panel h1{
     margin-bottom:20px;
     color:#003b8e;
 }
 
-.form-container label{
+.left-panel label{
     display:block;
     margin-top:18px;
     margin-bottom:6px;
     font-weight:600;
 }
 
-.form-container input{
+.left-panel input{
     width:100%;
     padding:12px;
     border:1px solid #ccc;
@@ -56,187 +44,123 @@ body{
     font-size:15px;
 }
 
-.form-container button{
+#downloadBtn{
     width:100%;
+    margin-top:25px;
     padding:14px;
-    margin-top:18px;
+    background:#003b8e;
+    color:white;
     border:none;
     border-radius:8px;
     cursor:pointer;
     font-size:16px;
-    font-weight:600;
+    font-weight:bold;
 }
 
-#generateBtn{
-    background:#003b8e;
-    color:#fff;
-}
-
-#generateBtn:hover{
-    background:#002b68;
-}
-
-#downloadBtn{
-    background:#f4b400;
-    color:#000;
-}
-
-#downloadBtn:hover{
-    background:#d89d00;
-}
-
-.preview-container{
+.preview{
     flex:1;
 }
 
-.preview-container h2{
-    margin-bottom:20px;
-    color:#003b8e;
-}
+/* ========================= */
 
-.business-card{
-    width:850px;
-    height:500px;
-    background:#fff;
-    border-radius:18px;
-    overflow:hidden;
-    display:flex;
-    box-shadow:0 15px 35px rgba(0,0,0,.15);
-}
+.card{
 
-.left-strip{
-    width:75px;
-    background:#003b8e;
     position:relative;
+
+    width:1400px;
+
+    max-width:100%;
+
 }
 
-.vertical-text{
+/* Background */
+
+.template{
+
+    width:100%;
+
+    display:block;
+
+}
+
+/* Name */
+
+.name{
+
     position:absolute;
-    bottom:35px;
-    left:50%;
-    transform:translateX(-50%) rotate(-90deg);
-    color:white;
-    letter-spacing:8px;
+
+    top:125px;
+
+    left:600px;
+
+    font-size:72px;
+
     font-weight:700;
-    font-size:20px;
-    white-space:nowrap;
-}
 
-.card-content{
-    flex:1;
-    display:flex;
-    justify-content:space-between;
-    padding:40px;
-}
-
-.details{
-    width:65%;
-}
-
-.details h1{
-    color:#003b8e;
-    font-size:40px;
-    margin-bottom:10px;
-}
-
-.details h3{
-    color:#555;
-    font-weight:500;
-    margin-bottom:35px;
-}
-
-.row{
-    display:flex;
-    gap:12px;
-    margin-bottom:22px;
-    font-size:17px;
-    line-height:1.5;
-}
-
-.icon{
-    width:25px;
-    font-size:18px;
-}
-
-.company{
-    margin-top:45px;
-}
-
-.company h4{
-    color:#003b8e;
-    margin-bottom:5px;
-}
-
-.company p{
-    font-weight:600;
-}
-
-.photo-section{
-    width:200px;
-    display:flex;
-    justify-content:center;
-    align-items:flex-start;
-}
-
-.photo-section img{
-    width:170px;
-    height:220px;
-    border-radius:10px;
-    object-fit:cover;
-    border:5px solid #f4b400;
-}
-
-@media(max-width:1200px){
-
-.main-container{
-    flex-direction:column;
-}
-
-.business-card{
-    width:100%;
-    height:auto;
-}
-
-.card-content{
-    flex-direction:column;
-}
-
-.details{
-    width:100%;
-}
-
-.photo-section{
-    width:100%;
-    justify-content:flex-end;
-    margin-top:30px;
-}
+    color:#08122f;
 
 }
 
-@media(max-width:768px){
+/* Job */
 
-body{
-    padding:15px;
+.job{
+
+    position:absolute;
+
+    top:240px;
+
+    left:600px;
+
+    font-size:34px;
+
+    color:#111;
+
 }
 
-.form-container{
-    width:100%;
-}
+/* Phone */
 
-.details h1{
+.phone{
+
+    position:absolute;
+
+    top:375px;
+
+    left:675px;
+
     font-size:28px;
+
 }
 
-.business-card{
-    border-radius:12px;
+/* Email */
+
+.email{
+
+    position:absolute;
+
+    top:535px;
+
+    left:675px;
+
+    font-size:28px;
+
 }
 
-.left-strip{
-    width:60px;
-}
+/* Photo */
 
-.vertical-text{
-    font-size:15px;
-}
+.photo{
+
+    position:absolute;
+
+    top:315px;
+
+    right:45px;
+
+    width:290px;
+
+    height:350px;
+
+    object-fit:cover;
+
+    border-radius:25px;
 
 }
