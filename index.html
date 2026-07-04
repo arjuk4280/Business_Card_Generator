@@ -5,16 +5,13 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Lenskart Business Card Generator</title>
+    <title>Business Card Generator</title>
 
-    <link rel="stylesheet"
-          href="style.css">
+    <link rel="stylesheet" href="style.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
@@ -24,35 +21,45 @@
 
 <div class="container">
 
+    <!-- ================= LEFT PANEL ================= -->
+
     <div class="left-panel">
 
         <h1>Business Card Generator</h1>
 
         <label>Name</label>
-        <input type="text"
-               id="name"
-               placeholder="Enter Name">
+        <input
+            type="text"
+            id="name"
+            placeholder="Enter Full Name">
 
         <label>Job Title</label>
-        <input type="text"
-               id="job"
-               placeholder="Enter Job Title">
+        <input
+            type="text"
+            id="job"
+            placeholder="Enter Job Title">
 
         <label>Phone Number</label>
-        <input type="text"
-               id="phone"
-               placeholder="+91 XXXXX XXXXX">
+        <input
+            type="text"
+            id="phone"
+            placeholder="+91 9876543210">
 
         <label>Email</label>
-        <input type="email"
-               id="email"
-               placeholder="example@lenskart.com">
+        <input
+            type="email"
+            id="email"
+            placeholder="name@company.com">
 
         <label>Upload Photo</label>
+        <input
+            type="file"
+            id="photo"
+            accept="image/*">
 
-        <input type="file"
-               id="photo"
-               accept="image/*">
+        <button id="generateBtn">
+            Generate Card
+        </button>
 
         <button id="downloadBtn">
             Download Card
@@ -60,45 +67,72 @@
 
     </div>
 
-    <!-- CARD -->
+    <!-- ================= RIGHT PANEL ================= -->
 
     <div class="preview">
 
-        <div id="businessCard"
-             class="card">
+        <div
+            class="card"
+            id="businessCard">
+
+            <!-- Background Template -->
 
             <img
+                class="template"
                 src="assets/template.png"
-                class="template">
+                alt="Business Card Template">
 
-            <!-- Dynamic Text -->
+            <!-- Name -->
 
-            <div id="cardName"
-                 class="name">
-                 Your Name
+            <div
+                class="name"
+                id="cardName">
+
+                Your Name
+
             </div>
 
-            <div id="cardJob"
-                 class="job">
-                 Job Title
+            <!-- Job -->
+
+            <div
+                class="job"
+                id="cardJob">
+
+                Job Title
+
             </div>
 
-            <div id="cardPhone"
-                 class="phone">
-                 +91 XXXXX XXXXX
+            <!-- Phone -->
+
+            <div
+                class="phone"
+                id="cardPhone">
+
+                +91 9876543210
+
             </div>
 
-            <div id="cardEmail"
-                 class="email">
-                 example@lenskart.com
+            <!-- Email -->
+
+            <div
+                class="email"
+                id="cardEmail">
+
+                example@email.com
+
             </div>
 
-            <!-- Photo -->
+            <!-- Employee Photo -->
 
             <img
+
                 id="cardPhoto"
+
                 class="photo"
-                src="https://via.placeholder.com/270x320">
+
+                src="https://via.placeholder.com/300x350?text=Photo"
+
+                alt="Employee Photo">
 
         </div>
 
@@ -109,4 +143,5 @@
 <script src="script.js"></script>
 
 </body>
+
 </html>
