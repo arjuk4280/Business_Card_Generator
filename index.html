@@ -6,80 +6,176 @@
     <title>Business Card Generator</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <div class="container">
+<div class="container">
 
-        <h1>Business Card Generator</h1>
+    <h1>Business Card Generator</h1>
 
-        <div class="form">
+    <div class="main-container">
+
+        <!-- ===========================
+             LEFT SIDE - FORM
+        ============================ -->
+
+        <div class="form-container">
+
+            <h2>Employee Details</h2>
 
             <label>Name</label>
-            <input type="text" id="name" placeholder="Enter Name">
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter Full Name">
 
             <label>Job Title</label>
-            <input type="text" id="job" placeholder="Enter Job Title">
+            <input
+                type="text"
+                id="job"
+                placeholder="Enter Job Title">
 
             <label>Phone Number</label>
-            <input type="text" id="phone" placeholder="Enter Phone Number">
+            <input
+                type="text"
+                id="phone"
+                placeholder="+91 9876543210">
 
             <label>Email</label>
-            <input type="email" id="email" placeholder="Enter Email">
+            <input
+                type="email"
+                id="email"
+                placeholder="name@lenskart.com">
 
             <label>Upload Photo</label>
-            <input type="file" id="photo" accept="image/*">
+            <input
+                type="file"
+                id="photo"
+                accept="image/*">
 
-            <button>Generate Card</button>
+            <button id="generateBtn">
+                Generate Card
+            </button>
+
+            <button id="downloadBtn">
+                Download Card
+            </button>
 
         </div>
 
-        </div>
+        <!-- ===========================
+             RIGHT SIDE - CARD PREVIEW
+        ============================ -->
 
-    <div class="preview">
+        <div class="preview-container">
 
-        <h2>Card Preview</h2>
+            <h2>Business Card Preview</h2>
 
-        <div class="business-card" id="businessCard">
+            <div class="business-card" id="businessCard">
 
-            <div class="left-side">
+                <!-- Left Blue Strip -->
+                <div class="left-strip">
 
-                <h1 id="cardName">Your Name</h1>
+                    <div class="vertical-text">
+                        LENSKART
+                    </div>
 
-                <h3 id="cardJob">Job Title</h3>
-
-                <div class="info">
-                    📞 <span id="cardPhone">+91 XXXXXXXXXX</span>
                 </div>
 
-                <div class="info">
-                    ✉ <span id="cardEmail">example@company.com</span>
+                <!-- Main Card -->
+
+                <div class="card-content">
+
+                    <div class="details">
+
+                        <h1 id="cardName">
+                            Your Name
+                        </h1>
+
+                        <h3 id="cardJob">
+                            Job Title
+                        </h3>
+
+                        <div class="info">
+
+                            <div class="row">
+
+                                <span class="icon">📞</span>
+
+                                <span id="cardPhone">
+                                    +91 9876543210
+                                </span>
+
+                            </div>
+
+                            <div class="row">
+
+                                <span class="icon">✉️</span>
+
+                                <span id="cardEmail">
+                                    example@lenskart.com
+                                </span>
+
+                            </div>
+
+                            <div class="row">
+
+                                <span class="icon">📍</span>
+
+                                <span>
+
+                                    Sector-74A,
+                                    Revenue Estate<br>
+
+                                    Village Begumpur Khatola<br>
+
+                                    Gurugram,
+                                    Haryana - 122004
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="company">
+
+                            <h4>
+                                Lenskart Solutions Pvt. Ltd.
+                            </h4>
+
+                            <p>
+                                www.lenskart.com
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Photo -->
+
+                    <div class="photo-section">
+
+                        <img
+                            id="cardPhoto"
+                            src="https://via.placeholder.com/170x220?text=Photo"
+                            alt="Employee Photo">
+
+                    </div>
+
                 </div>
-
-                <div class="info">
-                    📍 Sector-74A, Revenue Estate,<br>
-                    Village Begumpur Khatola,<br>
-                    Gurugram, Haryana-122004
-                </div>
-
-                <div class="website">
-                    www.lenskart.com
-                </div>
-
-            </div>
-
-            <div class="right-side">
-
-                <img
-                    id="cardPhoto"
-                    src="https://via.placeholder.com/170x220"
-                    alt="Photo">
 
             </div>
 
         </div>
 
     </div>
+
+</div>
 
 <script src="script.js"></script>
 
