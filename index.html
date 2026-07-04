@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Card Generator</title>
 
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Lenskart Business Card Generator</title>
 
-<!-- Download Business Card -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link rel="stylesheet"
+          href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
 </head>
 
@@ -19,161 +24,81 @@
 
 <div class="container">
 
-    <h1>Business Card Generator</h1>
+    <div class="left-panel">
 
-    <div class="main-container">
+        <h1>Business Card Generator</h1>
 
-        <!-- ===========================
-             LEFT SIDE - FORM
-        ============================ -->
+        <label>Name</label>
+        <input type="text"
+               id="name"
+               placeholder="Enter Name">
 
-        <div class="form-container">
+        <label>Job Title</label>
+        <input type="text"
+               id="job"
+               placeholder="Enter Job Title">
 
-            <h2>Employee Details</h2>
+        <label>Phone Number</label>
+        <input type="text"
+               id="phone"
+               placeholder="+91 XXXXX XXXXX">
 
-            <label>Name</label>
-            <input
-                type="text"
-                id="name"
-                placeholder="Enter Full Name">
+        <label>Email</label>
+        <input type="email"
+               id="email"
+               placeholder="example@lenskart.com">
 
-            <label>Job Title</label>
-            <input
-                type="text"
-                id="job"
-                placeholder="Enter Job Title">
+        <label>Upload Photo</label>
 
-            <label>Phone Number</label>
-            <input
-                type="text"
-                id="phone"
-                placeholder="+91 9876543210">
+        <input type="file"
+               id="photo"
+               accept="image/*">
 
-            <label>Email</label>
-            <input
-                type="email"
-                id="email"
-                placeholder="name@lenskart.com">
+        <button id="downloadBtn">
+            Download Card
+        </button>
 
-            <label>Upload Photo</label>
-            <input
-                type="file"
-                id="photo"
-                accept="image/*">
+    </div>
 
-            <button id="generateBtn">
-                Generate Card
-            </button>
+    <!-- CARD -->
 
-            <button id="downloadBtn">
-                Download Card
-            </button>
+    <div class="preview">
 
-        </div>
+        <div id="businessCard"
+             class="card">
 
-        <!-- ===========================
-             RIGHT SIDE - CARD PREVIEW
-        ============================ -->
+            <img
+                src="assets/template.png"
+                class="template">
 
-        <div class="preview-container">
+            <!-- Dynamic Text -->
 
-            <h2>Business Card Preview</h2>
-
-            <div class="business-card" id="businessCard">
-
-                <!-- Left Blue Strip -->
-                <div class="left-strip">
-
-                    <div class="vertical-text">
-                        LENSKART
-                    </div>
-
-                </div>
-
-                <!-- Main Card -->
-
-                <div class="card-content">
-
-                    <div class="details">
-
-                        <h1 id="cardName">
-                            Your Name
-                        </h1>
-
-                        <h3 id="cardJob">
-                            Job Title
-                        </h3>
-
-                        <div class="info">
-
-                            <div class="row">
-
-                                <span class="icon">📞</span>
-
-                                <span id="cardPhone">
-                                    +91 9876543210
-                                </span>
-
-                            </div>
-
-                            <div class="row">
-
-                                <span class="icon">✉️</span>
-
-                                <span id="cardEmail">
-                                    example@lenskart.com
-                                </span>
-
-                            </div>
-
-                            <div class="row">
-
-                                <span class="icon">📍</span>
-
-                                <span>
-
-                                    Sector-74A,
-                                    Revenue Estate<br>
-
-                                    Village Begumpur Khatola<br>
-
-                                    Gurugram,
-                                    Haryana - 122004
-
-                                </span>
-
-                            </div>
-
-                        </div>
-
-                        <div class="company">
-
-                            <h4>
-                                Lenskart Solutions Pvt. Ltd.
-                            </h4>
-
-                            <p>
-                                www.lenskart.com
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                    <!-- Photo -->
-
-                    <div class="photo-section">
-
-                        <img
-                            id="cardPhoto"
-                            src="https://via.placeholder.com/170x220?text=Photo"
-                            alt="Employee Photo">
-
-                    </div>
-
-                </div>
-
+            <div id="cardName"
+                 class="name">
+                 Your Name
             </div>
+
+            <div id="cardJob"
+                 class="job">
+                 Job Title
+            </div>
+
+            <div id="cardPhone"
+                 class="phone">
+                 +91 XXXXX XXXXX
+            </div>
+
+            <div id="cardEmail"
+                 class="email">
+                 example@lenskart.com
+            </div>
+
+            <!-- Photo -->
+
+            <img
+                id="cardPhoto"
+                class="photo"
+                src="https://via.placeholder.com/270x320">
 
         </div>
 
