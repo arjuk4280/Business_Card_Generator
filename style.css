@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Card Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Business Card Generator</h1>
+
+        <div class="form">
+
+            <label>Name</label>
+            <input type="text" id="name" placeholder="Enter Name">
+
+            <label>Job Title</label>
+            <input type="text" id="job" placeholder="Enter Job Title">
+
+            <label>Phone Number</label>
+            <input type="text" id="phone" placeholder="Enter Phone Number">
+
+            <label>Email</label>
+            <input type="email" id="email" placeholder="Enter Email">
+
+            <label>Upload Photo</label>
+            <input type="file" id="photo" accept="image/*">
+
+            <button>Generate Card</button>
+
+        </div>
+
+    </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
