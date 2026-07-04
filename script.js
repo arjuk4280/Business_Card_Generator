@@ -1,6 +1,8 @@
-// ===============================
+// ==============================
 // Business Card Generator
-// ===============================
+// ==============================
+
+// Form Fields
 
 const nameInput = document.getElementById("name");
 const jobInput = document.getElementById("job");
@@ -8,8 +10,12 @@ const phoneInput = document.getElementById("phone");
 const emailInput = document.getElementById("email");
 const photoInput = document.getElementById("photo");
 
+// Buttons
+
 const generateBtn = document.getElementById("generateBtn");
 const downloadBtn = document.getElementById("downloadBtn");
+
+// Card Fields
 
 const cardName = document.getElementById("cardName");
 const cardJob = document.getElementById("cardJob");
@@ -17,46 +23,59 @@ const cardPhone = document.getElementById("cardPhone");
 const cardEmail = document.getElementById("cardEmail");
 const cardPhoto = document.getElementById("cardPhoto");
 
-// ----------------------------
+// ==============================
 // Generate Card
-// ----------------------------
-generateBtn.addEventListener("click", () => {
+// ==============================
 
-    cardName.textContent = nameInput.value || "Your Name";
-    cardJob.textContent = jobInput.value || "Job Title";
-    cardPhone.textContent = phoneInput.value || "+91 9876543210";
-    cardEmail.textContent = emailInput.value || "example@lenskart.com";
+generateBtn.addEventListener("click", function () {
+
+    cardName.innerText = nameInput.value || "Your Name";
+
+    cardJob.innerText = jobInput.value || "Job Title";
+
+    cardPhone.innerText = phoneInput.value || "+91 9876543210";
+
+    cardEmail.innerText = emailInput.value || "example@email.com";
 
     if (photoInput.files.length > 0) {
 
         const reader = new FileReader();
 
         reader.onload = function (e) {
+
             cardPhoto.src = e.target.result;
+
         };
 
         reader.readAsDataURL(photoInput.files[0]);
+
     }
 
 });
 
-// ----------------------------
-// Download PNG
-// ----------------------------
-downloadBtn.addEventListener("click", () => {
+// ==============================
+// Download Card
+// ==============================
 
-    html2canvas(document.querySelector("#businessCard"), {
+downloadBtn.addEventListener("click", function () {
+
+    html2canvas(document.getElementById("businessCard"), {
+
         scale: 3,
-        useCORS: true
-    }).then(canvas => {
+
+        useCORS: true,
+
+        backgroundColor: null
+
+    }).then(function (canvas) {
 
         const link = document.createElement("a");
 
-        const filename =
+        const fileName =
             (nameInput.value || "Business_Card")
             .replace(/\s+/g, "_");
 
-        link.download = filename + ".png";
+        link.download = fileName + ".png";
 
         link.href = canvas.toDataURL("image/png");
 
