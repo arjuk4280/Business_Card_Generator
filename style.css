@@ -1,42 +1,242 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Card Generator</title>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
 
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+body{
+    background:#eef2f7;
+    padding:30px;
+}
 
-    <div class="container">
+.container{
+    width:100%;
+    max-width:1400px;
+    margin:auto;
+}
 
-        <h1>Business Card Generator</h1>
+.container h1{
+    text-align:center;
+    color:#003b8e;
+    margin-bottom:35px;
+}
 
-        <div class="form">
+.main-container{
+    display:flex;
+    gap:40px;
+    align-items:flex-start;
+}
 
-            <label>Name</label>
-            <input type="text" id="name" placeholder="Enter Name">
+.form-container{
+    width:380px;
+    background:#fff;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
 
-            <label>Job Title</label>
-            <input type="text" id="job" placeholder="Enter Job Title">
+.form-container h2{
+    margin-bottom:20px;
+    color:#003b8e;
+}
 
-            <label>Phone Number</label>
-            <input type="text" id="phone" placeholder="Enter Phone Number">
+.form-container label{
+    display:block;
+    margin-top:18px;
+    margin-bottom:6px;
+    font-weight:600;
+}
 
-            <label>Email</label>
-            <input type="email" id="email" placeholder="Enter Email">
+.form-container input{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:15px;
+}
 
-            <label>Upload Photo</label>
-            <input type="file" id="photo" accept="image/*">
+.form-container button{
+    width:100%;
+    padding:14px;
+    margin-top:18px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:600;
+}
 
-            <button>Generate Card</button>
+#generateBtn{
+    background:#003b8e;
+    color:#fff;
+}
 
-        </div>
+#generateBtn:hover{
+    background:#002b68;
+}
 
-    </div>
+#downloadBtn{
+    background:#f4b400;
+    color:#000;
+}
 
-<script src="script.js"></script>
+#downloadBtn:hover{
+    background:#d89d00;
+}
 
-</body>
-</html>
+.preview-container{
+    flex:1;
+}
+
+.preview-container h2{
+    margin-bottom:20px;
+    color:#003b8e;
+}
+
+.business-card{
+    width:850px;
+    height:500px;
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    display:flex;
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+.left-strip{
+    width:75px;
+    background:#003b8e;
+    position:relative;
+}
+
+.vertical-text{
+    position:absolute;
+    bottom:35px;
+    left:50%;
+    transform:translateX(-50%) rotate(-90deg);
+    color:white;
+    letter-spacing:8px;
+    font-weight:700;
+    font-size:20px;
+    white-space:nowrap;
+}
+
+.card-content{
+    flex:1;
+    display:flex;
+    justify-content:space-between;
+    padding:40px;
+}
+
+.details{
+    width:65%;
+}
+
+.details h1{
+    color:#003b8e;
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.details h3{
+    color:#555;
+    font-weight:500;
+    margin-bottom:35px;
+}
+
+.row{
+    display:flex;
+    gap:12px;
+    margin-bottom:22px;
+    font-size:17px;
+    line-height:1.5;
+}
+
+.icon{
+    width:25px;
+    font-size:18px;
+}
+
+.company{
+    margin-top:45px;
+}
+
+.company h4{
+    color:#003b8e;
+    margin-bottom:5px;
+}
+
+.company p{
+    font-weight:600;
+}
+
+.photo-section{
+    width:200px;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+}
+
+.photo-section img{
+    width:170px;
+    height:220px;
+    border-radius:10px;
+    object-fit:cover;
+    border:5px solid #f4b400;
+}
+
+@media(max-width:1200px){
+
+.main-container{
+    flex-direction:column;
+}
+
+.business-card{
+    width:100%;
+    height:auto;
+}
+
+.card-content{
+    flex-direction:column;
+}
+
+.details{
+    width:100%;
+}
+
+.photo-section{
+    width:100%;
+    justify-content:flex-end;
+    margin-top:30px;
+}
+
+}
+
+@media(max-width:768px){
+
+body{
+    padding:15px;
+}
+
+.form-container{
+    width:100%;
+}
+
+.details h1{
+    font-size:28px;
+}
+
+.business-card{
+    border-radius:12px;
+}
+
+.left-strip{
+    width:60px;
+}
+
+.vertical-text{
+    font-size:15px;
+}
+
+}
