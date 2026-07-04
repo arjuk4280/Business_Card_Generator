@@ -1,1 +1,120 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Business Card Generator</title><link rel="stylesheet" href="style.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script></head><body><h2>Replace assets/template.png with your template image.</h2><div class='container'><div class='left'><input id='name' placeholder='Name'><input id='job' placeholder='Job'><input id='phone' placeholder='Phone'><input id='email' placeholder='Email'><input id='photo' type='file'><button id='generateBtn'>Generate</button><button id='downloadBtn'>Download</button></div><div id='businessCard' class='card'><img class='template' src='assets/template.png'><div id='cardName' class='name'>Your Name</div><div id='cardJob' class='job'>Job Title</div><div id='cardPhone' class='phone'>+91</div><div id='cardEmail' class='email'>mail@example.com</div><img id='cardPhoto' class='photo'></div></div><script src='script.js'></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lenskart Business Card Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- LEFT PANEL -->
+
+    <div class="left-panel">
+
+        <h1>Business Card Generator</h1>
+
+        <label for="name">Name</label>
+        <input
+            type="text"
+            id="name"
+            placeholder="Enter Full Name">
+
+        <label for="job">Job Title</label>
+        <input
+            type="text"
+            id="job"
+            placeholder="Enter Job Title">
+
+        <label for="phone">Phone Number</label>
+        <input
+            type="text"
+            id="phone"
+            placeholder="+91 9876543210">
+
+        <label for="email">Email</label>
+        <input
+            type="email"
+            id="email"
+            placeholder="name@lenskart.com">
+
+        <label for="photo">Upload Photo</label>
+        <input
+            type="file"
+            id="photo"
+            accept="image/*">
+
+        <button id="generateBtn">
+            Generate Card
+        </button>
+
+        <button id="downloadBtn">
+            Download PNG
+        </button>
+
+    </div>
+
+    <!-- RIGHT PANEL -->
+
+    <div class="preview">
+
+        <div class="card" id="businessCard">
+
+            <!-- Background Template -->
+            <img
+                src="assets/template.png"
+                class="template"
+                alt="Business Card Template">
+
+            <!-- Dynamic Name -->
+            <div
+                id="cardName"
+                class="name">
+                Your Name
+            </div>
+
+            <!-- Dynamic Job -->
+            <div
+                id="cardJob"
+                class="job">
+                Job Title
+            </div>
+
+            <!-- Dynamic Phone -->
+            <div
+                id="cardPhone"
+                class="phone">
+                +91 9876543210
+            </div>
+
+            <!-- Dynamic Email -->
+            <div
+                id="cardEmail"
+                class="email">
+                example@lenskart.com
+            </div>
+
+            <!-- Dynamic Photo -->
+            <img
+                id="cardPhoto"
+                class="photo"
+                src="https://via.placeholder.com/280x340?text=Photo"
+                alt="Employee Photo">
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
