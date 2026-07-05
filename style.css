@@ -1,1 +1,521 @@
-body{font-family:Arial;background:#eee;margin:20px}.container{display:flex;gap:20px}.left{width:280px;display:flex;flex-direction:column;gap:8px}.card{position:relative;width:700px}.template{width:100%}.name,.job,.phone,.email,.photo{position:absolute}.name{top:70px;left:300px;font-size:30px;font-weight:bold}.job{top:120px;left:300px}.phone{top:190px;left:330px}.email{top:250px;left:330px}.photo{top:160px;right:30px;width:140px;height:180px;object-fit:cover}
+/* ===================================
+   RESET
+=================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#eef2f7;
+    padding:30px;
+}
+
+/* ===================================
+   PAGE
+=================================== */
+
+.container{
+    width:100%;
+    max-width:1800px;
+    margin:auto;
+    display:flex;
+    gap:40px;
+    align-items:flex-start;
+}
+
+/* ===================================
+   LEFT PANEL
+=================================== */
+
+.left-panel{
+
+    width:360px;
+
+    background:#ffffff;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+.left-panel h1{
+
+    color:#003b8e;
+
+    margin-bottom:25px;
+
+    text-align:center;
+
+    font-size:30px;
+
+}
+
+.left-panel label{
+
+    display:block;
+
+    margin-top:18px;
+
+    margin-bottom:7px;
+
+    font-weight:600;
+
+    color:#333;
+
+}
+
+.left-panel input{
+
+    width:100%;
+
+    padding:13px;
+
+    border:1px solid #cccccc;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+    outline:none;
+
+}
+
+.left-panel input:focus{
+
+    border-color:#003b8e;
+
+}
+
+.left-panel button{
+
+    width:100%;
+
+    margin-top:18px;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+}
+
+#generateBtn{
+
+    background:#003b8e;
+
+    color:white;
+
+}
+
+#generateBtn:hover{
+
+    background:#012d69;
+
+}
+
+#downloadBtn{
+
+    background:#f4b400;
+
+    color:#000;
+
+}
+
+#downloadBtn:hover{
+
+    background:#d89d00;
+
+}
+
+/* ===================================
+   PREVIEW
+=================================== */
+
+.preview{
+
+    flex:1;
+
+}
+
+.card{
+
+    position:relative;
+
+    width:1400px;
+
+    max-width:100%;
+
+    margin:auto;
+
+}
+
+/* ===================================
+   TEMPLATE IMAGE
+=================================== */
+
+.template{
+
+    width:100%;
+
+    display:block;
+
+}
+
+/* ===================================
+   TEXT POSITION
+=================================== */
+
+.name{
+
+    position:absolute;
+
+    top:115px;
+
+    left:520px;
+
+    font-size:62px;
+
+    font-weight:700;
+
+    color:#0c2454;
+
+    letter-spacing:.5px;
+
+}
+
+.job{
+
+    position:absolute;
+
+    top:205px;
+
+    left:520px;
+
+    font-size:30px;
+
+    color:#444;
+
+    font-weight:500;
+
+}
+
+.phone{
+
+    position:absolute;
+
+    top:325px;
+
+    left:610px;
+
+    font-size:27px;
+
+    color:#111;
+
+}
+
+.email{
+
+    position:absolute;
+
+    top:430px;
+
+    left:610px;
+
+    font-size:27px;
+
+    color:#111;
+
+}
+
+/* ===================================
+   PHOTO
+=================================== */
+
+.photo{
+
+    position:absolute;
+
+    top:185px;
+
+    right:55px;
+
+    width:250px;
+
+    height:310px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+}
+/* ===================================
+   COMPANY DETAILS (OPTIONAL)
+=================================== */
+
+.company{
+
+    position:absolute;
+
+    left:520px;
+
+    bottom:70px;
+
+    color:#0c2454;
+
+    font-size:20px;
+
+    font-weight:600;
+
+}
+
+.company span{
+
+    display:block;
+
+    color:#444;
+
+    font-size:17px;
+
+    margin-top:6px;
+
+}
+
+/* ===================================
+   CARD SHADOW
+=================================== */
+
+.card{
+
+    box-shadow:0 15px 35px rgba(0,0,0,.20);
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+}
+
+/* ===================================
+   DOWNLOAD QUALITY
+=================================== */
+
+#businessCard{
+
+    background:#ffffff;
+
+}
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+@media screen and (max-width:1400px){
+
+.container{
+
+    flex-direction:column;
+
+}
+
+.left-panel{
+
+    width:100%;
+
+}
+
+.preview{
+
+    width:100%;
+
+    overflow-x:auto;
+
+}
+
+.card{
+
+    width:1200px;
+
+}
+
+}
+
+@media screen and (max-width:992px){
+
+body{
+
+    padding:15px;
+
+}
+
+.card{
+
+    width:1000px;
+
+}
+
+.name{
+
+    font-size:48px;
+
+    top:90px;
+
+    left:370px;
+
+}
+
+.job{
+
+    font-size:24px;
+
+    top:165px;
+
+    left:370px;
+
+}
+
+.phone{
+
+    top:260px;
+
+    left:435px;
+
+    font-size:21px;
+
+}
+
+.email{
+
+    top:340px;
+
+    left:435px;
+
+    font-size:21px;
+
+}
+
+.photo{
+
+    width:190px;
+
+    height:240px;
+
+    right:45px;
+
+    top:150px;
+
+}
+
+}
+
+@media screen and (max-width:768px){
+
+.card{
+
+    width:850px;
+
+}
+
+.name{
+
+    font-size:40px;
+
+}
+
+.job{
+
+    font-size:20px;
+
+}
+
+.phone{
+
+    font-size:18px;
+
+}
+
+.email{
+
+    font-size:18px;
+
+}
+
+.photo{
+
+    width:160px;
+
+    height:210px;
+
+}
+
+}
+
+/* ===================================
+   BUTTON EFFECT
+=================================== */
+
+button{
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+/* ===================================
+   INPUT EFFECT
+=================================== */
+
+input{
+
+    transition:.3s;
+
+}
+
+input:hover{
+
+    border-color:#003b8e;
+
+}
+
+/* ===================================
+   SCROLLBAR
+=================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+    height:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#003b8e;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#dfe5ef;
+
+}
